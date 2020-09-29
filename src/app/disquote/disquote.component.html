@@ -1,1 +1,11 @@
-<p>disquote works!</p>
+<div class="section">
+    <p>Author: {{description.author}}</p>
+    <p>Publisher: {{description.publisher}}</p>
+    <div class="main">
+        <button class="btn btn-success glyphicon glyphicon-thumbs-down" (click)="add(true)" appVoteCount="true"><img
+                src="https://i.ibb.co/prvpGLT/icons8-thumbs-up-48.png"> {{upVotes}}</button>
+        <button class="btn btn-dark glyphicon glyphicon-thumbs-down" (click)="down(true)" appVoteCount="false"><img
+                src="https://i.ibb.co/HhgTLhQ/icons8-thumbs-down-48.png"> {{downVotes}}</button>
+    </div>
+</div>
+
