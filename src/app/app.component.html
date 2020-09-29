@@ -1,5 +1,5 @@
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div style="background-image: url('https://i.ibb.co/K6j0Tw6/birmingham-museums-trust-iy-ZWdk-Bi-Mfw-unsplash.jpg');"
@@ -7,10 +7,15 @@
                 <h2 class="text-center text-white">Welcome To Quote Session</h2>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="header">
-                <h2>Famous Quotes</h2>
+        <div class="col-md-12 text-center">
+            <app-newquote (newQuote)="addQuote($event)"></app-newquote>
+        </div>
+        
+        <div class="col-md-12">
+            <div class="header text-center">
                 <hr />
+                <h2>Famous Quotes</h2>
+                
             </div>
             <div class="main-container" *ngFor="let quote of Quotess; let i = index">
                 <div class="quotes">
@@ -23,9 +28,67 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <app-newquote (newQuote)="addQuote($event)"></app-newquote>
+       
+    </div>
+</div> -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+
+url(../assets/image\ 1.jpg);" class="jumbotron">
+                <h2 class="text-center text-white">Welcome To Quote Session</h2>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <app-newquote (reagan)="addQuote($event)"></app-newquote>
+        </div>
+
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="header text-center">
+        <h1>Famous Quotes</h1>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Card deck -->
+            <div class="card-deck ">
+                <!-- Card -->
+                <div class="card mb-3" *ngFor="let quote of Quotess; let i = index">
+
+                    <!--Card image-->
+
+
+                    <!--Card content-->
+                    <div class="card-body one">
+
+                        <!--Title-->
+                        <h4 class="card-title text-danger">Quotes</h4>
+                        <!--Text-->
+                        <p class="card-text"><span>Quote:</span>{{quote.quote}} <span class="font-italic">Submitted
+                                {{quote.submitDate| date}} days
+                                ago</span></p>
+
+                        <div class="description">
+                            <app-disquote *ngIf="quote.showDetails" [description]='Quotess'></app-disquote>
+                        </div>
+                        <button class="btn btn-info" (click)='showDetails(i)'>Details</button>
+                        
+                        <button class="btn btn-danger" (click)='deletequote($event,i)'>Delete</button>
+
+
+
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+
+            </div>
+            <!-- Card deck -->
         </div>
     </div>
-</div>
 <router-outlet></router-outlet>
