@@ -1,6 +1,5 @@
 # Quotes
 
-# ![My Quotes](https://github.com/REAGAN2020/My-Quotes)
 
 ## DESCRIPTION
 
