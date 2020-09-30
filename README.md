@@ -1,5 +1,6 @@
 # Quotes
 
+# ![Delani Studio](https://github.com/REAGAN2020/quote-1)
 
 ## DESCRIPTION
 
@@ -19,10 +20,9 @@ Allows users to create their own quotes and the latter is saved in realtime.
 
 Implements Angular's two-way data binding, allowing users to create and display quotes
 
-
 ## Demo
 
-Here is a working live demo :
+Here is a working live demo :https://reagan2020.github.io/quotes-1/
 
 ### Development
 

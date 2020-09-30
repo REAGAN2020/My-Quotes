@@ -1,40 +1,7 @@
-<!-- <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div style="background-image: url('https://i.ibb.co/K6j0Tw6/birmingham-museums-trust-iy-ZWdk-Bi-Mfw-unsplash.jpg');"
-                class="jumbotron">
-                <h2 class="text-center text-white">Welcome To Quote Session</h2>
-            </div>
-        </div>
-        <div class="col-md-12 text-center">
-            <app-newquote (newQuote)="addQuote($event)"></app-newquote>
-        </div>
-        
-        <div class="col-md-12">
-            <div class="header text-center">
-                <hr />
-                <h2>Famous Quotes</h2>
-                
-            </div>
-            <div class="main-container" *ngFor="let quote of Quotess; let i = index">
-                <div class="quotes">
-                    <p>Quote: {{quote.quote}}</p>
-                    <span class="font-italic">Submitted {{quote.submitDate}} days ago</span>
-                </div>
-                <button class="btn btn-info" (click)='showDetails(i)'>details</button>
-                <div class="description">
-                    <app-disquote *ngIf="quote.showDetails" [description]='Quotess'></app-disquote>
-                </div>
-            </div>
-        </div>
-       
-    </div>
-</div> -->
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-url(../assets/image\ 1.jpg);" class="jumbotron">
+            <div class="jumbotron">
                 <h2 class="text-center text-white">Welcome To Quote Session</h2>
             </div>
         </div>
@@ -49,17 +16,15 @@ url(../assets/image\ 1.jpg);" class="jumbotron">
         <hr />
     </div>
     <div class="row">
-        <div class="col-md-12 imgcol">
+        <div class="col-md-12">
             <!-- Card deck -->
             <div class="card-deck">
+
                 <!-- Card -->
-                <div class="card img mb-3" *ngFor="let quote of Quotess; let i = index">
-
-                    <!--Card image-->
-
+                <div class="card img " >
 
                     <!--Card content-->
-                    <div class="card-body">
+                    <div class="card-body" *ngFor="let quote of Quotess; let i = index" >
 
                         <!--Title-->
                         <h4 class="card-title text-danger">Quotes</h4>
@@ -67,7 +32,6 @@ url(../assets/image\ 1.jpg);" class="jumbotron">
                         <p class="card-text"><span>Quote:</span>{{quote.quote}} <span class="font-italic">Submitted
                                 {{quote.submitDate| date}} days
                                 ago</span></p>
-
                         <div class="description">
                             <app-disquote *ngIf="quote.showDetails" [description]='Quotess'></app-disquote>
                         </div>
@@ -80,8 +44,10 @@ url(../assets/image\ 1.jpg);" class="jumbotron">
                 </div>
                 <!-- Card -->
 
+
             </div>
             <!-- Card deck -->
         </div>
     </div>
-    <router-outlet></router-outlet>
+</div>
+<router-outlet></router-outlet>
