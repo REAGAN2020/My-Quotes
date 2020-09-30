@@ -22,7 +22,7 @@ Implements Angular's two-way data binding, allowing users to create and display 
 
 ## Demo
 
-Here is a working live demo : https://reagan2020.github.io/quotes-1/
+Here is a working live demo :https://reagan2020.github.io/quotes-1/
 
 ### Development
 
